@@ -23,8 +23,6 @@ class Board:
     #colours of the walkers in the different states
     visuals = {Status.SUSCEPTIBLE: "b", Status.ASYMPTOMATIC: "m", Status.PRESYMPTOMATIC: "y", Status.INFECTED: "r", Status.RECOVERED: "g", Status.DEAD: "k"}
     SIR_visuals = ["b", "r", "g"]
-    #number of frames per second
-    fps = 1000
     def __init__(self, width, height):
         self.width = width
         self.height = height
