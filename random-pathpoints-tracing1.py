@@ -27,7 +27,7 @@ def setup():
         mymodel.add_walker(Status.SUSCEPTIBLE)
     for _ in range(10):
         mymodel.add_walker(Status.INFECTED)
-    ani = FuncAnimation(mymodel.board.fig, mymodel.board.plot_board, frames=range(100), interval = 1/mymodel.board.fps, repeat=True)
+    ani = FuncAnimation(mymodel.board.fig, mymodel.board.plot_board, frames=range(100), interval = 1/mymodel.fps, repeat=True)
     #graph = myboard.graph_board()
     plt.show()
 
