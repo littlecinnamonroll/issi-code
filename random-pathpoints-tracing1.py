@@ -68,4 +68,4 @@ def save_data(bigness, percent_healthy):
     data = {"Iterations": iterations, "Susceptible": num_sus, "Infected": "0", "Recovered/Dead": num_rec + num_dead}
     df = df.append(data, ignore_index=True)
     df.to_csv(r"saved-data-1.csv", index=False, mode="a")
-save_data(100,0.93)
+save_data(200,0.93)
