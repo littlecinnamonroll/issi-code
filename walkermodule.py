@@ -91,8 +91,8 @@ class Walker:
         self.status = roll2(self.model.incubate_prob)
     def alert(self):
         if not self.is_alerted():
-            self.radius *= 0.8
-            self.speed *= 0.4
+            self.radius *= self.model.alerted_radius_reduction
+            self.speed *= self.model.alerted_speed_reduction
             self.alert_status = 1
     def is_infected(self):
         return self.status == Status.INFECTED

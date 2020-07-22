@@ -21,6 +21,8 @@ class Model:
         self.test_chance = 0 #adjust to change proportion tested
         self.false_positive = 0.01 #prob healthy shows up infected
         self.false_negative = 0.01 #prob infected shows up healthy
+        self.alerted_radius_reduction = 0.8
+        self.alerted_speed_reduction = 0.4
         #probabilities for transition from infected to each of the following three states
         self.incubate_prob = {Status.PRESYMPTOMATIC: 0.6, Status.ASYMPTOMATIC: 0.4}
         self.M = {Status.INFECTED: 0.99, Status.RECOVERED: 0.007, Status.DEAD: 0.003}
