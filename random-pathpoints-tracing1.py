@@ -36,19 +36,21 @@ def setup():
 #percent_healthy = 93
 
 
-def save_data(bigness, percent_healthy):
+def save_data(bigness, density, percent_healthy):
     df = pd.DataFrame(columns=["Iterations", "Susceptible", "Infected", "Recovered/Dead"])
     iterations = 0
+    num_inf = 0
     #data_file = open("saved-data.txt", "w+")
-    myboard = Board(bigness, bigness)
+    myboard = Board(bigness, bigness, density)
     mymodel = Model(myboard)
-    for _ in range(int(bigness*percent_healthy)):
+    for _ in range(int(bigness**2*density*percent_healthy)):
         mymodel.add_walker(Status.SUSCEPTIBLE)
-    for _ in range(int(bigness*(1-percent_healthy)*mymodel.incubate_prob[Status.PRESYMPTOMATIC])):
+    for _ in range(int(bigness**2*density*(1-percent_healthy)*mymodel.incubate_prob[Status.PRESYMPTOMATIC])):
         mymodel.add_walker(Status.PRESYMPTOMATIC)
-    for _ in range(int(bigness*(1-percent_healthy)*mymodel.incubate_prob[Status.ASYMPTOMATIC])):
+        num_inf +=1
+    for _ in range(int(bigness**2*density*(1-percent_healthy)*mymodel.incubate_prob[Status.ASYMPTOMATIC])):
         mymodel.add_walker(Status.ASYMPTOMATIC)
-    num_inf = int(bigness*(1-percent_healthy))
+        num_inf +=1
     while num_inf > 0:
         num_inf = 0
         for walker in myboard.walkers:
@@ -68,4 +70,4 @@ def save_data(bigness, percent_healthy):
     data = {"Iterations": iterations, "Susceptible": num_sus, "Infected": "0", "Recovered/Dead": num_rec + num_dead}
     df = df.append(data, ignore_index=True)
     df.to_csv(r"saved-data-1.csv", index=False, mode="a")
-save_data(200,0.93)
+save_data(100,0.02,0.93)
