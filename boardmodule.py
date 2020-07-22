@@ -23,9 +23,10 @@ class Board:
     #colours of the walkers in the different states
     visuals = {Status.SUSCEPTIBLE: "b", Status.ASYMPTOMATIC: "m", Status.PRESYMPTOMATIC: "y", Status.INFECTED: "r", Status.RECOVERED: "g", Status.DEAD: "k"}
     SIR_visuals = ["b", "r", "g"]
-    def __init__(self, width, height):
+    def __init__(self, width, height, density):
         self.width = width
         self.height = height
+        self.density = density
         #we initialise the walkers as en empty list that we later add to
         self.walkers = []
         #each instance of the class Board has its own instance variables for the scatter plot
