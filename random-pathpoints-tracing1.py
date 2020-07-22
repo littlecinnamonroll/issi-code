@@ -83,9 +83,9 @@ def save_data(bigness, density, percent_healthy):
     ax.plot(range(iterations+1),list_inf, "r")
     ax.plot(range(iterations+1),list_end, "g")
 
-#dense = float(sys.argv[1])
+given = int(sys.argv[1])
 #for bigness in range(50,201,5):
-for dense in range(1,101,3):
-    save_data(160,dense/10000,0.93)
-    plt.savefig(f"saved-data-{dense}.png")
+for dense in range(given,given+31,3):
+    save_data(500,dense/10000,0.93)
+    plt.savefig(f"saved-data-500board-{dense}.png")
 #plt.show()
