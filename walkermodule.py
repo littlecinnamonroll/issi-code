@@ -36,6 +36,7 @@ class Walker:
 
         self.status = status
         self.alert_status = 0
+        self.test_status = 0
         self.board = board
         self.model = model
         self.infect_radius = self.model.infect_radius
@@ -70,6 +71,17 @@ class Walker:
             #print("new pathpoint")
             if roll(0.3):
                 self.new_pathpoint()
+    def test(self):
+            if not (self.is_infected() or self.is_recovered() or self.is_dead()):
+                if roll(self.model.test_chance):
+                    if ((self.is_susceptible() and roll(self.model.false_positive)) or (self.is_presymptomatic() or self.is_asymptomatic()) and roll(1-self.model.false_negative)):
+                        self.test_status = 1
+                        for i in self.traced_list:
+                            if not i.is_alerted():
+                                i.alert()
+                    else:
+                        pass
+
     def is_susceptible(self):
         return self.status == Status.SUSCEPTIBLE
         #returns true if susceptible and false otherwise
@@ -81,8 +93,8 @@ class Walker:
         self.status = roll2(self.model.incubate_prob)
     def alert(self):
         if not self.is_alerted():
-            self.radius *= 0.9
-            self.speed *= 0.6
+            self.radius *= 0.8
+            self.speed *= 0.4
             self.alert_status = 1
     def is_infected(self):
         return self.status == Status.INFECTED
@@ -120,7 +132,7 @@ class Walker:
                 self.tracing_dict[x] += 1
             else:
                 self.tracing_dict[x] = 0
-            if self.tracing_dict[x] == 10:
+            if self.tracing_dict[x] == 5:
                 self.traced_list.append(x)
     def update_status(self):
         no_of_infected_neighbours = self.no_of_infected_neighbours()
@@ -135,8 +147,10 @@ class Walker:
         elif self.is_presymptomatic():
             if roll(self.model.symptom_chance):
                 self.status = Status.INFECTED
-                for walker in self.traced_list:
-                    walker.alert()
+                if self.test_status == 0:
+                    for walker in self.traced_list:
+                        if not walker.is_alerted():
+                            walker.alert()
         elif self.is_infected():
             #if infected, transition to the recovered or dead state
             self.status = roll2(self.model.M)
