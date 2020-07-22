@@ -8,6 +8,7 @@ import pandas as pd
 from modelclass import Model
 from boardmodule import Board
 from walkermodule import Status
+import sys
 #import mapmodule
 
 def roll(p):
@@ -19,7 +20,7 @@ def roll2(M):
     #with M's values are the probability weights
     return np.random.choice(list(M.keys()), p=list(M.values()))
 
-def setup():
+def animation():
     #end_frame =
     myboard = Board(100,100)
     mymodel = Model(myboard)
@@ -31,43 +32,59 @@ def setup():
     #graph = myboard.graph_board()
     plt.show()
 
-#setup()
-#bigness = 100
-#percent_healthy = 93
-
+#animation()
 
 def save_data(bigness, density, percent_healthy):
-    df = pd.DataFrame(columns=["Iterations", "Susceptible", "Infected", "Recovered/Dead"])
+    df = pd.DataFrame(columns=["Iterations", "Susceptible", "Infected", "Recovered", "Dead"])
     iterations = 0
-    num_inf = 0
+    num_sus,num_inf,num_end = 0,0,0
     #data_file = open("saved-data.txt", "w+")
     myboard = Board(bigness, bigness, density)
     mymodel = Model(myboard)
     for _ in range(int(bigness**2*density*percent_healthy)):
         mymodel.add_walker(Status.SUSCEPTIBLE)
+        num_sus +=1
     for _ in range(int(bigness**2*density*(1-percent_healthy)*mymodel.incubate_prob[Status.PRESYMPTOMATIC])):
         mymodel.add_walker(Status.PRESYMPTOMATIC)
         num_inf +=1
     for _ in range(int(bigness**2*density*(1-percent_healthy)*mymodel.incubate_prob[Status.ASYMPTOMATIC])):
         mymodel.add_walker(Status.ASYMPTOMATIC)
         num_inf +=1
+    list_sus = [num_sus]
+    list_inf = [num_inf]
+    list_end = [num_end]
     while num_inf > 0:
-        num_inf = 0
+        num_inf, num_sus, num_end = 0,0,0
         for walker in myboard.walkers:
-            if (walker.is_infected() or walker.is_presymptomatic() or walker.is_asymptomatic()):
+            if walker.is_susceptible():
+                num_sus +=1
+            elif (walker.is_infected() or walker.is_presymptomatic() or walker.is_asymptomatic()):
                 num_inf +=1
+            else:
+                num_end +=1
+        list_sus.append(num_sus)
+        list_inf.append(num_inf)
+        list_end.append(num_end)
         iterations += 1
+
         #print(f"new iteration: {iterations}, num_inf: {num_inf}")
         myboard.update()
-    num_sus, num_rec, num_dead = 0,0,0
+    num_rec = 0
     for walker in myboard.walkers:
-        if walker.is_susceptible():
-            num_sus += 1
-        elif walker.is_recovered():
+        if walker.is_recovered():
             num_rec +=1
-        elif walker.is_dead():
-            num_dead +=1
-    data = {"Iterations": iterations, "Susceptible": num_sus, "Infected": "0", "Recovered/Dead": num_rec + num_dead}
+        num_dead = num_end - num_rec
+    data = {"Iterations": iterations, "Susceptible": num_sus, "Infected": "0", "Recovered": num_rec, "Dead": num_dead}
     df = df.append(data, ignore_index=True)
     df.to_csv(r"saved-data-1.csv", index=False, mode="a")
-save_data(100,0.02,0.93)
+
+    fig,ax = plt.subplots()
+    ax.plot(range(iterations+1),list_sus, "b")
+    ax.plot(range(iterations+1),list_inf, "r")
+    ax.plot(range(iterations+1),list_end, "g")
+
+dense = float(sys.argv[1])
+for bigness in range(50,201,5):
+    save_data(bigness,dense,0.93)
+    plt.savefig(f"saved-data-{bigness}.png")
+#plt.show()

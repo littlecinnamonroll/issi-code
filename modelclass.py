@@ -18,7 +18,7 @@ class Model:
         self.infected_probability = 0.5 #chance susceptible catches the virus
         self.infect_radius = 5
         self.uses_app_chance = 0.6 #adjust to change fraciton of app users
-        self.test_chance = 0.4 #adjust to change proportion tested
+        self.test_chance = 0 #adjust to change proportion tested
         self.false_positive = 0.01 #prob healthy shows up infected
         self.false_negative = 0.01 #prob infected shows up healthy
         #probabilities for transition from infected to each of the following three states
