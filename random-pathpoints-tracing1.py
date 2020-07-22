@@ -76,7 +76,7 @@ def save_data(bigness, density, percent_healthy):
         num_dead = num_end - num_rec
     data = {"Iterations": iterations, "Susceptible": num_sus, "Infected": "0", "Recovered": num_rec, "Dead": num_dead}
     df = df.append(data, ignore_index=True)
-    df.to_csv(r"saved-data-1.csv", index=False, mode="a")
+    df.to_csv(f"saved-data-{sys.argv[1]}.csv", index=False, mode="a")
 
     fig,ax = plt.subplots()
     ax.plot(range(iterations+1),list_sus, "b")
@@ -87,5 +87,5 @@ given = int(sys.argv[1])
 #for bigness in range(50,201,5):
 for dense in range(given,given+31,3):
     save_data(500,dense/10000,0.93)
-    plt.savefig(f"saved-data-500board-{dense}.png")
+    plt.savefig(f"saved-data-500board-{dense:03}.png")
 #plt.show()
