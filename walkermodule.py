@@ -120,7 +120,7 @@ class Walker:
     def log_neighbours(self):
         if self.uses_app():
             app_users = list(self.board.find_app_users())
-            app_users.remove(self)
+            #app_users.remove(self)
             current_app_neighbours = [x for x in app_users if self.distance(x)<= self.model.infect_radius]
         else:
             current_app_neighbours = []

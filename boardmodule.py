@@ -96,7 +96,7 @@ class Board:
         self.scat.set_color(colour_data)
 #        print(f"infected={self.num_inf}, asymptomatic={self.num_asym}, presymptomatic={self.num_pre}, recovered={self.num_rec}, dead={self.num_dead}")
         #plt.subplot(212)
-        self.graph_board()
+#        self.graph_board()
     def graph_board(self):
         global t
         t += 1

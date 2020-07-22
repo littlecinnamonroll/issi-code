@@ -34,13 +34,13 @@ def animation():
 
 #animation()
 
-def save_data(bigness, density, percent_healthy):
+def save_data(bigness, density, percent_healthy, useappc, radiusc, speedc):
     df = pd.DataFrame(columns=["Iterations", "Susceptible", "Infected", "Recovered", "Dead"])
     iterations = 0
     num_sus,num_inf,num_end = 0,0,0
     #data_file = open("saved-data.txt", "w+")
     myboard = Board(bigness, bigness, density)
-    mymodel = Model(myboard)
+    mymodel = Model(myboard, useappc, radiusc, speedc)
     num_walkers = bigness**2*density
     for _ in range(int(num_walkers*percent_healthy)):
         mymodel.add_walker(Status.SUSCEPTIBLE)
@@ -54,7 +54,7 @@ def save_data(bigness, density, percent_healthy):
     list_sus = [num_sus]
     list_inf = [num_inf]
     list_end = [num_end]
-    while num_inf > num_walkers*self.model.detectability_threshold:
+    while num_inf > num_walkers*mymodel.detectability_threshold:
         num_inf, num_sus, num_end = 0,0,0
         for walker in myboard.walkers:
             if walker.is_susceptible():
@@ -75,18 +75,21 @@ def save_data(bigness, density, percent_healthy):
         if walker.is_recovered():
             num_rec +=1
         num_dead = num_end - num_rec
-    data = {"Iterations": iterations, "Susceptible": num_sus, "Infected": num_inf, "Recovered": num_rec, "Dead": num_dead}
+    data = {"Iterations": iterations, "Susceptible": num_sus, "Infected": num_inf, "Recovered": num_rec, "Dead": num_dead, "Radius factor": radiusc, "Speed factor": speedc}
     df = df.append(data, ignore_index=True)
-    df.to_csv(f"saved-data-{sys.argv[1]}.csv", index=False, mode="a")
+    df.to_csv(f"saved-data-app{useappc}.csv", index=False, mode="a")
 
     fig,ax = plt.subplots()
     ax.plot(range(iterations+1),list_sus, "b")
     ax.plot(range(iterations+1),list_inf, "r")
     ax.plot(range(iterations+1),list_end, "g")
 
-given = int(sys.argv[1])
+#given = int(sys.argv[1])
 #for bigness in range(50,201,5):
-for dense in range(given,given+31,3):
-    save_data(500,dense/10000,0.93)
-    plt.savefig(f"saved-data-500board-{dense:03}.png")
+useapp_proportion = int(sys.argv[1])
+for radius_factor in range(11):
+    for speed_factor in range(11):
+        save_data(400,34/10000,0.93, useapp_proportion/10, radius_factor/10, speed_factor/10)
+        plt.savefig(f"data-400board-density034-app{useapp_proportion:02}-rad{radius_factor:02}-speed{speed_factor:02}.png")
+        plt.close("all")
 #plt.show()
