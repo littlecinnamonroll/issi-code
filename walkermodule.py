@@ -41,7 +41,7 @@ class Walker:
         self.model = model
         self.infect_radius = self.model.infect_radius
         self.tracing_dict = {i: 0 for i in self.board.walkers}
-        self.speed = 10 #later, we can vary speeds for different walkers
+        self.speed = 0.5 #later, we can vary speeds for different walkers
         self.pathpoint = Pathpoint(self)
         self.app_use = roll(self.model.uses_app_chance)
         self.traced_list = []
@@ -58,13 +58,11 @@ class Walker:
         #dead people don't walk
         if self.status == Status.DEAD:
             return
-        #Pau: Updated dt
-        dt = 1e-2
         dist_to_pathpoint = self.distance(self.pathpoint)
         if dist_to_pathpoint > 1:
             #print(f"my coordinates are {self.x} {self.y}, moving towards {self.pathpoint.x} {self.pathpoint.y}")
             vector = np.array([self.pathpoint.x-self.x, self.pathpoint.y-self.y])
-            scaling_factor = self.speed*dt/dist_to_pathpoint
+            scaling_factor = self.speed/dist_to_pathpoint
             self.x += scaling_factor*vector[0]
             self.y += scaling_factor*vector[1]
         else:
