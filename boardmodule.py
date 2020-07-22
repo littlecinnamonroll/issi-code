@@ -44,6 +44,7 @@ class Board:
         #updates the state of the board based on the individual updates of each walker
         for walker in self.walkers:
             walker.walk()
+            walker.test()
             walker.update_status()
 
     def find_infected(self):
