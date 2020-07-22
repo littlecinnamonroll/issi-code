@@ -9,9 +9,9 @@ from walkermodule import Walker, Status
 from boardmodule import Board
 
 class Model:
-    def __init__(self,board):
     #number of frames per second
     fps = 1000
+    def __init__(self,board):
         self.board = board
         self.symptom_chance = 0.01 #chance presymptomatic becomes infected
         self.recover_chance = 0.02 #chance asymptomatic recovers
