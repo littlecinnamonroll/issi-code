@@ -17,6 +17,7 @@ class Model:
         self.recover_chance = 0.02 #chance asymptomatic recovers
         self.infected_probability = 0.5 #chance susceptible catches the virus
         self.infect_radius = 5
+        self.app_radius = 5
         self.uses_app_chance = useappc #adjust to change fraciton of app users
         self.test_chance = 0 #adjust to change proportion tested
         self.detectability_threshold = 0.01 #if proportion of walkers falls below this, the model stops

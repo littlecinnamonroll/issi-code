@@ -40,7 +40,7 @@ class Walker:
         self.board = board
         self.model = model
         self.infect_radius = self.model.infect_radius
-        self.tracing_dict = {i: 0 for i in self.board.walkers}
+        self.tracing_dict = {}
         self.speed = 0.5 #later, we can vary speeds for different walkers
         self.pathpoint = Pathpoint(self)
         self.app_use = roll(self.model.uses_app_chance)
@@ -91,7 +91,7 @@ class Walker:
         self.status = roll2(self.model.incubate_prob)
     def alert(self):
         if not self.is_alerted():
-            self.radius *= self.model.alerted_radius_reduction
+            self.infect_radius *= self.model.alerted_radius_reduction
             self.speed *= self.model.alerted_speed_reduction
             self.alert_status = 1
     def is_infected(self):
@@ -121,18 +121,22 @@ class Walker:
         if self.uses_app():
             app_users = list(self.board.find_app_users())
             #app_users.remove(self)
-            current_app_neighbours = [x for x in app_users if self.distance(x)<= self.model.infect_radius]
+            current_app_neighbours = [x for x in app_users if self.distance(x)<= self.model.app_radius]
         else:
             current_app_neighbours = []
         #using the class radius as the app doesn't know about precautions the other person took
         for x in self.board.walkers:
             if x in current_app_neighbours and not (x in self.traced_list):
-                self.tracing_dict[x] += 1
+                if x in self.tracing_dict.keys():
+                    self.tracing_dict[x] += 1
+                else:
+                    self.tracing_dict[x] = 1
             else:
                 self.tracing_dict[x] = 0
-            if self.tracing_dict[x] == 5:
+            if self.tracing_dict[x] == 3:
                 self.traced_list.append(x)
     def update_status(self):
+        self.log_neighbours()
         no_of_infected_neighbours = self.no_of_infected_neighbours()
         if self.is_susceptible() and (no_of_infected_neighbours > 0):
             if roll(1-(1-self.model.infected_probability)**(no_of_infected_neighbours)):
@@ -145,10 +149,12 @@ class Walker:
         elif self.is_presymptomatic():
             if roll(self.model.symptom_chance):
                 self.status = Status.INFECTED
-                if self.test_status == 0:
-                    for walker in self.traced_list:
-                        if not walker.is_alerted():
-                            walker.alert()
+                if self.uses_app():
+                    self.alert()
+            #    if self.alert_status == 0:
+                for walker in self.traced_list:
+                    if not walker.is_alerted():
+                        walker.alert()
         elif self.is_infected():
             #if infected, transition to the recovered or dead state
             self.status = roll2(self.model.M)
