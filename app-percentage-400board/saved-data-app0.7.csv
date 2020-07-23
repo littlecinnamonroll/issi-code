@@ -1,0 +1,242 @@
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+848.0,26.0,5.0,424.0,87.0,0.0,0.0
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+879.0,38.0,5.0,407.0,92.0,0.0,0.1
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+819.0,52.0,5.0,392.0,93.0,0.0,0.2
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+1093.0,34.0,5.0,407.0,96.0,0.0,0.3
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+862.0,34.0,5.0,412.0,91.0,0.0,0.4
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+755.0,47.0,5.0,410.0,80.0,0.0,0.5
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+919.0,33.0,5.0,414.0,90.0,0.0,0.6
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+959.0,43.0,5.0,406.0,88.0,0.0,0.7
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+1128.0,31.0,5.0,401.0,105.0,0.0,0.8
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+999.0,34.0,5.0,401.0,102.0,0.0,0.9
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+1157.0,23.0,5.0,424.0,90.0,0.0,1.0
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+1013.0,38.0,5.0,434.0,65.0,0.1,0.0
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+989.0,43.0,5.0,411.0,83.0,0.1,0.1
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+991.0,52.0,5.0,402.0,83.0,0.1,0.2
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+880.0,45.0,5.0,405.0,87.0,0.1,0.3
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+945.0,47.0,5.0,410.0,80.0,0.1,0.4
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+1126.0,38.0,5.0,407.0,92.0,0.1,0.5
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+904.0,31.0,5.0,420.0,86.0,0.1,0.6
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+1269.0,21.0,5.0,421.0,95.0,0.1,0.7
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+935.0,33.0,5.0,421.0,83.0,0.1,0.8
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+977.0,40.0,5.0,405.0,92.0,0.1,0.9
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+1002.0,41.0,5.0,411.0,85.0,0.1,1.0
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+915.0,52.0,5.0,404.0,81.0,0.2,0.0
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+940.0,30.0,5.0,396.0,111.0,0.2,0.1
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+927.0,21.0,5.0,424.0,92.0,0.2,0.2
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+964.0,30.0,5.0,421.0,86.0,0.2,0.3
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+839.0,33.0,5.0,421.0,83.0,0.2,0.4
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+1076.0,22.0,5.0,425.0,90.0,0.2,0.5
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+965.0,45.0,5.0,397.0,95.0,0.2,0.6
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+939.0,31.0,5.0,411.0,95.0,0.2,0.7
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+888.0,26.0,5.0,410.0,101.0,0.2,0.8
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+1011.0,29.0,5.0,416.0,92.0,0.2,0.9
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+949.0,38.0,5.0,404.0,95.0,0.2,1.0
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+1020.0,45.0,5.0,403.0,89.0,0.3,0.0
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+950.0,39.0,5.0,421.0,77.0,0.3,0.1
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+967.0,29.0,5.0,430.0,78.0,0.3,0.2
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+957.0,27.0,5.0,419.0,91.0,0.3,0.3
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+1145.0,27.0,5.0,422.0,88.0,0.3,0.4
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+1022.0,35.0,5.0,406.0,96.0,0.3,0.5
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+883.0,35.0,5.0,406.0,96.0,0.3,0.6
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+929.0,39.0,5.0,409.0,89.0,0.3,0.7
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+923.0,32.0,5.0,414.0,91.0,0.3,0.8
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+841.0,39.0,5.0,381.0,117.0,0.3,0.9
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+873.0,35.0,5.0,407.0,95.0,0.3,1.0
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+882.0,43.0,5.0,416.0,78.0,0.4,0.0
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+983.0,26.0,5.0,423.0,88.0,0.4,0.1
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+926.0,43.0,5.0,405.0,89.0,0.4,0.2
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+1012.0,39.0,5.0,403.0,95.0,0.4,0.3
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+931.0,30.0,5.0,415.0,92.0,0.4,0.4
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+1092.0,25.0,5.0,433.0,79.0,0.4,0.5
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+801.0,37.0,5.0,410.0,90.0,0.4,0.6
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+934.0,36.0,5.0,408.0,93.0,0.4,0.7
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+901.0,53.0,4.0,401.0,84.0,0.4,0.8
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+1106.0,43.0,5.0,398.0,96.0,0.4,0.9
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+1076.0,48.0,5.0,404.0,85.0,0.4,1.0
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+875.0,40.0,5.0,418.0,79.0,0.5,0.0
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+965.0,26.0,5.0,420.0,91.0,0.5,0.1
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+844.0,35.0,5.0,418.0,84.0,0.5,0.2
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+967.0,35.0,5.0,406.0,96.0,0.5,0.3
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+861.0,36.0,5.0,411.0,90.0,0.5,0.4
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+989.0,27.0,5.0,417.0,93.0,0.5,0.5
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+934.0,31.0,5.0,417.0,89.0,0.5,0.6
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+852.0,48.0,5.0,410.0,79.0,0.5,0.7
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+903.0,33.0,5.0,411.0,93.0,0.5,0.8
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+971.0,37.0,5.0,415.0,85.0,0.5,0.9
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+840.0,42.0,5.0,428.0,67.0,0.5,1.0
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+1019.0,54.0,5.0,399.0,84.0,0.6,0.0
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+842.0,42.0,4.0,406.0,90.0,0.6,0.1
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+926.0,31.0,5.0,420.0,86.0,0.6,0.2
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+901.0,53.0,5.0,383.0,101.0,0.6,0.3
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+786.0,33.0,5.0,410.0,94.0,0.6,0.4
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+816.0,39.0,5.0,411.0,87.0,0.6,0.5
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+873.0,32.0,5.0,417.0,88.0,0.6,0.6
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+917.0,28.0,5.0,400.0,109.0,0.6,0.7
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+853.0,47.0,5.0,410.0,80.0,0.6,0.8
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+845.0,36.0,5.0,407.0,94.0,0.6,0.9
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+823.0,26.0,5.0,421.0,90.0,0.6,1.0
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+869.0,24.0,5.0,424.0,89.0,0.7,0.0
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+1039.0,23.0,4.0,430.0,85.0,0.7,0.1
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+909.0,28.0,5.0,410.0,99.0,0.7,0.2
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+1044.0,42.0,5.0,415.0,80.0,0.7,0.3
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+1168.0,50.0,5.0,403.0,84.0,0.7,0.4
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+764.0,36.0,5.0,406.0,95.0,0.7,0.5
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+839.0,30.0,5.0,425.0,82.0,0.7,0.6
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+838.0,33.0,5.0,433.0,71.0,0.7,0.7
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+908.0,30.0,5.0,412.0,95.0,0.7,0.8
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+1090.0,32.0,5.0,412.0,93.0,0.7,0.9
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+961.0,33.0,5.0,415.0,89.0,0.7,1.0
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+831.0,40.0,5.0,413.0,84.0,0.8,0.0
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+1000.0,25.0,5.0,407.0,105.0,0.8,0.1
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+946.0,35.0,5.0,401.0,101.0,0.8,0.2
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+1037.0,19.0,5.0,432.0,86.0,0.8,0.3
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+938.0,41.0,5.0,411.0,85.0,0.8,0.4
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+955.0,44.0,5.0,408.0,85.0,0.8,0.5
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+960.0,45.0,5.0,405.0,87.0,0.8,0.6
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+1005.0,36.0,5.0,417.0,84.0,0.8,0.7
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+1008.0,21.0,5.0,427.0,89.0,0.8,0.8
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+965.0,35.0,5.0,410.0,92.0,0.8,0.9
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+834.0,51.0,5.0,403.0,83.0,0.8,1.0
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+900.0,25.0,5.0,428.0,84.0,0.9,0.0
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+840.0,41.0,5.0,407.0,89.0,0.9,0.1
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+764.0,30.0,5.0,403.0,104.0,0.9,0.2
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+1046.0,23.0,5.0,417.0,97.0,0.9,0.3
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+865.0,41.0,5.0,393.0,103.0,0.9,0.4
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+926.0,41.0,5.0,395.0,101.0,0.9,0.5
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+1054.0,42.0,5.0,422.0,73.0,0.9,0.6
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+1055.0,37.0,5.0,412.0,88.0,0.9,0.7
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+921.0,31.0,5.0,402.0,104.0,0.9,0.8
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+1046.0,32.0,5.0,421.0,84.0,0.9,0.9
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+1076.0,38.0,5.0,407.0,92.0,0.9,1.0
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+977.0,42.0,5.0,402.0,93.0,1.0,0.0
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+964.0,33.0,5.0,411.0,93.0,1.0,0.1
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+1003.0,34.0,5.0,424.0,79.0,1.0,0.2
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+971.0,50.0,5.0,411.0,76.0,1.0,0.3
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+785.0,32.0,5.0,415.0,90.0,1.0,0.4
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+1084.0,35.0,5.0,416.0,86.0,1.0,0.5
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+1002.0,32.0,5.0,422.0,83.0,1.0,0.6
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+1038.0,43.0,4.0,419.0,76.0,1.0,0.7
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+837.0,39.0,5.0,410.0,88.0,1.0,0.8
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+867.0,36.0,5.0,408.0,93.0,1.0,0.9
+Iterations,Susceptible,Infected,Recovered,Dead,Radius factor,Speed factor
+849.0,44.0,5.0,411.0,82.0,1.0,1.0
