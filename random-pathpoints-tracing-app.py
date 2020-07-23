@@ -86,12 +86,11 @@ def save_data(bigness, density, percent_healthy, useappc, radiusc, speedc):
 
 #given = int(sys.argv[1])
 #for bigness in range(50,201,5):
-useapp_proportion = 10
-radius_factor = 0
-speed_factor = 0
-#for radius_factor in range(11):
-#    for speed_factor in range(11):
-save_data(400,34/10000,0.93, useapp_proportion/10, radius_factor/10, speed_factor/10)
+useapp_proportion = int(sys.argv[1])
+
+for radius_factor in range(5):
+    for speed_factor in range(3):
+save_data(400,34/10000,0.93, useapp_proportion/10, radius_factor/4, speed_factor/2)
 plt.savefig(f"data-400board-density034-app{useapp_proportion:02}-rad{radius_factor:02}-speed{speed_factor:02}.png")
 plt.close("all")
 #plt.show()
