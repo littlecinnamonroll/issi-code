@@ -22,17 +22,17 @@ def roll2(M):
 
 def animation():
     #end_frame =
-    myboard = Board(100,100)
+    myboard = Board(200,200,0.01,0,0,0)
     mymodel = Model(myboard)
-    for _ in range(100):
+    for _ in range(200):
         mymodel.add_walker(Status.SUSCEPTIBLE)
-    for _ in range(10):
+    for _ in range(20):
         mymodel.add_walker(Status.INFECTED)
     ani = FuncAnimation(mymodel.board.fig, mymodel.board.plot_board, frames=range(100), interval = 1/mymodel.fps, repeat=True)
     #graph = myboard.graph_board()
     plt.show()
 
-#animation()
+animation()
 
 def save_data(bigness, density, percent_healthy):
     df = pd.DataFrame(columns=["Iterations", "Susceptible", "Infected", "Recovered", "Dead"])
@@ -86,7 +86,7 @@ def save_data(bigness, density, percent_healthy):
 
 given = int(sys.argv[1])
 #for bigness in range(50,201,5):
-for dense in range(given,given+31,3):
-    save_data(500,dense/10000,0.93)
-    plt.savefig(f"saved-data-500board-{dense:03}.png")
+#for dense in range(given,given+31,3):
+#    save_data(500,dense/10000,0.93)
+#    plt.savefig(f"saved-data-500board-{dense:03}.png")
 #plt.show()

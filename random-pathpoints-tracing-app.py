@@ -1,4 +1,5 @@
 import random
+import matplotlib
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 import numpy as np
@@ -23,16 +24,17 @@ def roll2(M):
 def animation():
     #end_frame =
     myboard = Board(200,200, 34/10000)
-    mymodel = Model(myboard, 1, 0, 0)
+    mymodel = Model(myboard, 0, 0, 0)
     for _ in range(100):
         mymodel.add_walker(Status.SUSCEPTIBLE)
     for _ in range(10):
         mymodel.add_walker(Status.INFECTED)
-    ani = FuncAnimation(mymodel.board.fig, mymodel.board.plot_board, frames=range(100), interval = 1/mymodel.fps, repeat=True)
+    ani = FuncAnimation(mymodel.board.fig, mymodel.board.plot_board, frames=range(1000), interval = 1/mymodel.fps, repeat=False)
+    ani.save("simulation.mp4",dpi=96,fps=50)
     #graph = myboard.graph_board()
-    plt.show()
+    #plt.show()
 
-#animation()
+animation()
 
 def save_data(bigness, density, percent_healthy, useappc, radiusc, speedc):
     df = pd.DataFrame(columns=["Iterations", "Susceptible", "Infected", "Recovered", "Dead"])
@@ -80,17 +82,23 @@ def save_data(bigness, density, percent_healthy, useappc, radiusc, speedc):
     df.to_csv(f"saved-data-app{useappc}.csv", index=False, mode="a")
 
     fig,ax = plt.subplots()
-    ax.plot(range(iterations+1),list_sus, "b")
-    ax.plot(range(iterations+1),list_inf, "r")
-    ax.plot(range(iterations+1),list_end, "g")
+
+    ax.plot(range(iterations+1),list_sus, "b", label="Susceptible")
+    ax.plot(range(iterations+1),list_inf, "r", label="Infected")
+    ax.plot(range(iterations+1),list_end, "g", label="Recovered")
+    plt.xlabel("Number of frames")
+    plt.ylabel("Number of walkers")
+    plt.title("SIR curve with all traced\nNo radius of contagion")
+    plt.legend(fontsize="xx-large")
 
 #given = int(sys.argv[1])
 #for bigness in range(50,201,5):
-useapp_proportion = int(sys.argv[1])
+#useapp_proportion = int(sys.argv[1])
 
-for radius_factor in range(5):
-    for speed_factor in range(3):
-        save_data(400,34/10000,0.93, useapp_proportion/10, radius_factor/4, speed_factor/2)
-        plt.savefig(f"data-400board-density034-app{useapp_proportion:02}-rad{radius_factor:02}-speed{speed_factor:02}.png")
-        plt.close("all")
+
+save_data(50,0.01,0.93, 0, 0,0)
+plt.savefig(f"title.png")
+#save_data(400,34/10000,0.93, 1, 0,0)
+#plt.savefig(f"data-alltracing.png")
+plt.close("all")
 #plt.show()

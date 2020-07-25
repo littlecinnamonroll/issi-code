@@ -30,7 +30,8 @@ class Board:
         #we initialise the walkers as en empty list that we later add to
         self.walkers = []
         #each instance of the class Board has its own instance variables for the scatter plot
-        self.fig = plt.figure()
+        self.fig = plt.figure(10,7.5,True)
+        self.fig.set_size_inches()
         self.ax1 = self.fig.add_subplot(2,1,1)
         self.ax2 = self.fig.add_subplot(2,1,2)
         self.scat = self.ax1.scatter([],[], s=[blob_size], c=["b"])
@@ -96,11 +97,11 @@ class Board:
         self.scat.set_color(colour_data)
 #        print(f"infected={self.num_inf}, asymptomatic={self.num_asym}, presymptomatic={self.num_pre}, recovered={self.num_rec}, dead={self.num_dead}")
         #plt.subplot(212)
-#        self.graph_board()
+        self.graph_board()
     def graph_board(self):
         global t
         t += 1
-        if t == 10:
+        if t == 5:
             for i in range(3):
             #    if self.num_inf + self.num_pre + self.num_asym == 0:
                 timeseries = [ x[i] for x in self.plot_lines ]
