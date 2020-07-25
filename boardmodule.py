@@ -101,6 +101,7 @@ class Board:
     def graph_board(self):
         global t
         t += 1
+        print(t)
         if t == 5:
             for i in range(3):
             #    if self.num_inf + self.num_pre + self.num_asym == 0:

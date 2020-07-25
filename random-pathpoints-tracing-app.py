@@ -25,10 +25,15 @@ def animation():
     #end_frame =
     myboard = Board(200,200, 34/10000)
     mymodel = Model(myboard, 0, 0, 0)
-    for _ in range(100):
+    num_walkers = 200**2*34/10000
+    for _ in range(int(num_walkers*percent_healthy)):
         mymodel.add_walker(Status.SUSCEPTIBLE)
-    for _ in range(10):
-        mymodel.add_walker(Status.INFECTED)
+        num_sus +=1
+    for _ in range(int(num_walkers*(1-percent_healthy)*mymodel.incubate_prob[Status.PRESYMPTOMATIC])):
+        mymodel.add_walker(Status.PRESYMPTOMATIC)
+        num_inf +=1
+    for _ in range(int(num_walkers*(1-percent_healthy)*mymodel.incubate_prob[Status.ASYMPTOMATIC])):
+        mymodel.add_walker(Status.ASYMPTOMATIC)
     ani = FuncAnimation(mymodel.board.fig, mymodel.board.plot_board, frames=range(1000), interval = 1/mymodel.fps, repeat=False)
     ani.save("simulation.mp4",dpi=96,fps=50)
     #graph = myboard.graph_board()
