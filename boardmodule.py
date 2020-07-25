@@ -30,8 +30,8 @@ class Board:
         #we initialise the walkers as en empty list that we later add to
         self.walkers = []
         #each instance of the class Board has its own instance variables for the scatter plot
-        self.fig = plt.figure(10,7.5,True)
-        self.fig.set_size_inches()
+        self.fig = plt.figure()
+        self.fig.set_size_inches(10,7.5,True)
         self.ax1 = self.fig.add_subplot(2,1,1)
         self.ax2 = self.fig.add_subplot(2,1,2)
         self.scat = self.ax1.scatter([],[], s=[blob_size], c=["b"])
