@@ -26,6 +26,7 @@ def animation():
     myboard = Board(200,200, 34/10000)
     mymodel = Model(myboard, 0, 0, 0)
     num_walkers = 200**2*34/10000
+    percent_healthy = 0.93
     for _ in range(int(num_walkers*percent_healthy)):
         mymodel.add_walker(Status.SUSCEPTIBLE)
         num_sus +=1
